@@ -9,7 +9,7 @@ const isLoggedIn = false
 const outsideTemp = null
 let userEmail;
 let secUserEmail = undefined
-// both line:11 & 12 are undifined, no matter how will we write. Both are correct.
+// both line:10 & 11 are undifined, no matter how will we write. Both are correct.
 
 
 const id = Symbol('123')
