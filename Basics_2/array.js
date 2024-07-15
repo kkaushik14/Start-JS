@@ -58,13 +58,13 @@ const subSets = [5, 4, 8, 9, [5, 6, 2], 2, [1, 2, 3, [7, 9]]]
 const mySubSet = subSets.flat(Infinity)
 // console.log(mySubSet);
 
-// console.log(Array.isArray("kaushik"))
-// console.log(Array.from("kaushik"))
-// console.log(Array.from({name: "kaushik"}))
+// console.log(Array.isArray("kaushik"))     check if this is array or not
+// console.log(Array.from("kaushik"))        change into array
+// console.log(Array.from({name: "kaushik"}))    
 
 
 let score1 = 100
 let score2 = 200
 let score3 = 300
 
-console.log(Array.of(score1, score2, score3));
+console.log(Array.of(score1, score2, score3));    //returns a new array from set of statements.
