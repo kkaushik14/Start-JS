@@ -43,9 +43,13 @@ const mySet2 = ["up", "i", "we"]
 // mySet.push(mySet2)
 // console.log(mySet);
 
+
+//concate
 // const allSet = mySet.concat(mySet2)
 // console.log(allSet);
 
+
+//spread
 const allSet2 = [...mySet, ...mySet2]
 // console.log(allSet2);
 
