@@ -16,7 +16,7 @@ let isLoggedIn = false  //boolean data type
 //number= 2^53//bigInt
 //String = ""
 //boolean = han/naaa
-//null(stand alone value): representation of empty values; we cam asign it as null
+//null(stand alone value): representation of empty values; we can asign it as null
 //undefined: I declared variable but not given value
 //symbol: to find uniqueness
 
