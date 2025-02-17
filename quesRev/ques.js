@@ -277,13 +277,37 @@ const longestWord = findLongestWord(["kumar", "kaushik", "CEO", "KKOS"]);
 
 // Nested Functions and Context
 // Task 1: Using this in Objects
+// Create an object person with a method introduce() that uses this,
+// additionally add properties of name & age that will result in Hi, my name is Kaushik and I am 21 years old on calling introduce().
+let personOne = {
+    name:"Kaushik",
+    age: 21,        
+    introduce() {
+        return `Hi, my name is ${this.name} and I am ${this.age} years old`;
+    }
+}
+// console.log(personOne.introduce());
 
-// Create an object person with a method introduce() that uses this
+//additional(using constructor func with method) ->
+function PersonTwo(name, age) {
+    this.name = name;
+    this.age = age;
+}
+PersonTwo.prototype.introduce = function() {
+    return `Hi, my name is ${this.name} and I am ${this.age} years old`;
+}
+let persons = new PersonTwo("Kaushik", 21);
+// console.log(persons.introduce());
 
-// additionally add properties of name & age that will result in Hi, my name is Hitesh and I am 19.5 years old on calling introduce()
 
 
 
 // Task 2: Function within a function
-
-// Write a function outer() that contains another function inner() and returns a value of 'Inner function called' on calling outer()
+// Write a function outer() that contains another function inner() and returns a value of 'Inner function called' on calling outer().
+function outer() {
+    function inner() {
+        return `Inner function called!!`;
+    }
+    return inner();
+}
+console.log(outer());
