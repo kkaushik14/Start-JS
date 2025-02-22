@@ -44,6 +44,13 @@ document.addEventListener("DOMContentLoaded", () => {
             saveTasks();
         });
 
+        li.querySelector("button").addEventListener("click", (e) => {
+            e.stopPropagation();
+            tasks = tasks.filter((t) => t.id === task.id);
+            li.remove();
+            saveTasks();
+          });
+
         todoList.appendChild(li);
     }
 
