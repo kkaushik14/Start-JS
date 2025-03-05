@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="output.css">
+    <title>Weather App | Dark mode</title>
+</head>
+<body class="bg-slate-900 text-slate-400 flex justify-center items-center h-screen">
+    <div class="container bg-slate-800 text-center w-96 place-content-between gap-10 mb-20 rounded-lg">
+        <h1 class="font-extrabold text-3xl m-6">Weather Forecast</h1>
+        <div class="input-container ">
+            <input type="text" class="bg-slate-300 text-slate-800 rounded-md p-2 m-3" id="city-input" placeholder="Enter city name..." />
+            <button id="get-weather-btn" class="bg-black p-2.5 rounded-md font-bold hover:bg-slate-900 ease-in-out">Get Weather</button>
+        </div>
+
+        <div id="weather-info" class="hidden m-6">
+            <h2 id="city-name" class="text-2xl text-amber-800 font-bold underline underline-offset-8 mb-5"></h2>
+            <p id="temperature" class="text-xl"></p>
+            <p id="description" class="text-xl"></p>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center">
+            <p id="sunrise" class="text-xl text-yellow-600"></p>
+            <p id="sunset" class="text-xl text-orange-900"></p>
+        </div>
+        <p id="error-message" class="hidden text-red-800 mt-20">City not found. Please try again.</p>
+    </div>
+
+
+
+    <script src="weather.js"></script>
+</body>
+</html>
