@@ -30,23 +30,28 @@ document.addEventListener("DOMContentLoaded", () => {
         const li = document.createElement("li");
         li.setAttribute("data-id", task.id);
 
+        const checkBox = document.createElement("input");
+        checkBox.type = "checkBox";
+        checkBox.checked = task.completed;
+
         if(task.completed) li.classList.add("completed");
 
         li.innerHTML = `
         <span>${task.text}</span>
-        <button>Delete</button>
+        <button>Delete</button>  
         `;
 
-        li.addEventListener('click', (e) => {
-            if(e.target.tagName === 'BUTTON') return;
-            task.completed = !task.completed;
-            li.classList.toggle('completed')
+        checkBox.addEventListener('change', () => {
+            task.completed = checkBox.checked;
+            li.classList.toggle("completed", task.completed)
             saveTasks();
         });
 
+        li.prepend(checkBox);
+
         li.querySelector("button").addEventListener("click", (e) => {
-            e.stopPropagation();
-            tasks = tasks.filter((t) => t.id === task.id);
+            e.stopPropagation(); //to prevent toggle from firing
+            tasks = tasks.filter((t) => t.id !== task.id);
             li.remove();
             saveTasks();
           });
