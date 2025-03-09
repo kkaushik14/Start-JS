@@ -40,6 +40,24 @@
         #checkout-btn:hover {
             background-color: #3700b3;
         }
+        .cartProductRemove {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .cartProductRemove button {
+            background-color: #ea001b;
+            border: none;
+            padding: 3px 7px;
+            margin-bottom: 8px;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .cartProductRemove button:hover {
+            background-color: #9b0324;
+        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-400 flex justify-center items-center h-screen">
@@ -48,7 +66,7 @@
         <div id="product-list" class="mb-6"></div>
 
         <h2 class="font-bold text-3xl m-4">Shopping Cart</h2>
-        <div id="cart-items" class="m-6">
+        <div id="cart-items" class="addedCartItems m-6">
             <p id="empty-cart" class="text-center mt-6 hover:text-slate-50 ease-in-out">Your cart is empty</p>
         </div>
 
